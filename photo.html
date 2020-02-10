@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Images</h2>
+  <ul id="demo"></ul>
+  <script>
+    var xmlhttp = new XMLHttpRequest(); // to import data from any website
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) { // 4 means the request has been finished and the response is ready . 
+        var obj = JSON.parse(this.responseText);
+        var posts = obj.data.children;
+        var html_code = '';
+        for (var i = 1; i < posts.length; i++) {
+          html_code += '<li><b>' + posts[i].data.title + '<br></b><img height = 500 width = 500 src ="' + posts[i].data.url + '" /></li>';
+        }
+        document.getElementById("demo").innerHTML = html_code;
+      }
+    };
+    xmlhttp.open("GET", "http://www.reddit.com/r/pics.json", true);
+    xmlhttp.send();
+  </script>
+</body>
+</html>
