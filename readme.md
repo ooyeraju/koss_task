@@ -6,19 +6,25 @@ JSON stands for JavaScript Object Notation and according to [W3School](https://w
 ### JSON Data types and Syntax
 
 JSON has these many Data types and follow this simple syntax.
+* Strings
+* Boolean
+* Numbers
+* Object
+* Array
+* Null
 
 ```json
 {
-  "Name": "Watson", //string
-  "Male": true, //boolean
-  "age": 27, // numbers
+  "Name": "Watson", 
+  "Male": true, 
+  "age": 27,
   "address": {
     "streetAddress": "21 2nd Street",
     "city": "New York",
     "state": "NY"
-  }, // object
-  "children": ["Jhon", "Marry"], // array
-  "spouse": null // null
+  }, 
+  "children": ["Jhon", "Marry"], 
+  "spouse": null 
 }
 ```
 ## To view images from Subreddit
@@ -35,10 +41,10 @@ Since the JSON link was given has to many lines of code so we need to copy that 
             {
               "data": {
                   "approved_at_utc": null,
-                  .
-                  .
+                  
+                  
                   "url": "https://i.redd.it/ugmxx1vl7of41.jpg",
-                  .
+                  
                   "is_video": false
               }
             }]
